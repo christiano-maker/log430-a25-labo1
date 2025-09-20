@@ -13,7 +13,7 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
-          
+
       - name: Créer fichier .env 
         run: |
           echo "MYSQL_HOST=localhost" >> .env
@@ -63,7 +63,7 @@ jobs:
 
   deploy:
     runs-on: self-hosted
-    needs: test   # Ne se lance que si les tests passent
+    needs: test   # Ne se lance que si les tests passen
     steps:
       - uses: actions/checkout@v4
 
