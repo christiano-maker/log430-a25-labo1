@@ -1,5 +1,8 @@
+# from daos.user_dao_mongo import UserDAOMongo as UserDAO
 from daos.user_dao import UserDAO
 from models.user import User
+
+
 
 dao = UserDAO()
 
@@ -29,6 +32,7 @@ def test_user_update():
     assert corrected_email in emails
 
 def test_user_delete():
+    
     user = User(None, 'Douglas Engelbart', 'engelbart@example.com')
     assigned_id = dao.insert(user)
     dao.delete(assigned_id)
