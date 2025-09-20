@@ -12,6 +12,7 @@ services:
       - .env
 
   mysql:
+    container_name: mysql 
     image: mysql:8
     restart: unless-stopped
     ports:
